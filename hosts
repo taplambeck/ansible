@@ -1,22 +1,19 @@
 #Ansible Hosts File. Location /etc/ansible/hosts
 
-[wan routers]
+[wan_routers]
 10.10.10.82
 
-[external switches]
-
-[dmz switches]
-
-[mdf switches]
-
-[idf switches]
+[external_switches]
+[dmz_switches]
+[mdf_switches]
+[idf_switches]
 
 [cisco:devices]
-wan routers
-external switches
-dmz switches
-mdf switches
-idf switches
+wan_routers
+external_switches
+dmz_switches
+mdf_switches
+idf_switches
 
 [cisco:vars]
 ansible_connection=ssh
@@ -24,7 +21,7 @@ ansible_user=cisco
 ansible_ssh_pass=cisco
 
 [routers:children]
-wan routers
+wan_routers
 
 [routers:vars]
 ansible_connection=ssh
@@ -32,10 +29,10 @@ ansible_user=cisco
 ansible_ssh_pass=cisco
 
 [switches:children]
-external switches
-dmz switches
-mdf switches
-idf switches
+external_switches
+dmz_switches
+mdf_switches
+idf_switches
 
 [switches:vars]
 ansible_connection=ssh
