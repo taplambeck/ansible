@@ -1,0 +1,8 @@
+#Facility level variables. Each facility will have a file outling the IP Services infrasturce
+#IP Range - 
+#
+ntp_server: x.x.x.x
+snmp_ro: xxxxxx
+snmp_rw: xxxxxx
+log_server: x.x.x.x
+dhcp_server: x.x.x.x
