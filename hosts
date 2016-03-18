@@ -21,6 +21,7 @@ idf switches
 [cisco:vars]
 ansible_connection=ssh
 ansible_user=cisco
+ansible_ssh_pass=cisco
 
 [routers:children]
 wan routers
@@ -28,6 +29,7 @@ wan routers
 [routers:vars]
 ansible_connection=ssh
 ansible_user=cisco
+ansible_ssh_pass=cisco
 
 [switches:children]
 external switches
@@ -38,3 +40,4 @@ idf switches
 [switches:vars]
 ansible_connection=ssh
 ansible_user=cisco
+ansible_ssh_pass=cisco
