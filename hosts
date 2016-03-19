@@ -22,7 +22,7 @@ CSR02 ansibl_host=10.10.10.85
 #IDF Switches using /28 Subnet from DHCP
 #10.10.0.[2-15]
 
-[cisco:devices]
+[cisco:children]
 wan_routers
 external_switches
 dmz_switches
