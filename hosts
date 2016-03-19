@@ -4,23 +4,23 @@
 CSR01 ansibl_host=10.10.10.82
 CSR02 ansibl_host=10.10.10.85
 #WAN Routers using /28 Subnet from DHCP
-#10.10.0.[2-15]
+#10.10.0.[2:15]
 
 [external_switches]
 #External Switches using /28 Subnet from DHCP
-#10.20.0.[2-15]
+#10.20.0.[2:15]
 
 [dmz_switches]
 #DMZ Switches using /28 Subnet from DHCP
-#10.30.0.[2-15]
+#10.30.0.[2:15]
 
 [mdf_switches]
 #MDF Switches (Non-Core) using /28 Subnet from DHCP
-#10.40.0.[2-15]
+#10.40.0.[2:15]
 
 [idf_switches]
 #IDF Switches using /28 Subnet from DHCP
-#10.10.0.[2-15]
+#10.10.0.[2:15]
 
 [cisco:children]
 wan_routers
