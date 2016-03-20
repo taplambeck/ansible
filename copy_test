@@ -1,0 +1,20 @@
+---
+
+- name: copy
+  hosts: CSR01
+  connection: ssh
+  gather_facts: no
+
+
+  tasks:
+
+    # copy config file from server to switch
+    - nxos_copy:
+        #server_host=192.168.200.56
+        server_path='/home/bedroc/Downloads/ansible_transfer.txt'
+        server_un=cisco
+        server_pw=cisco
+        copy_type=scp
+        local_path='bootflash:switch_config1.cfg'
+        #vrf=management
+        host={{ inventory_hostname }}
