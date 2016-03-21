@@ -1,0 +1,25 @@
+---
+- name: Initial Jumpstart for IOS Devices
+  hosts: cisco_devices
+  connection: local
+  gather_facts: false
+  #remote_user: cisco
+  
+  vars:
+
+  tasks:
+  
+    - expect:
+    command: [yes/no]:
+    responses:
+      yes
+      
+    - name: run traceroute to every other host
+      raw: traceroute {{ item.value }} source Loopback0 probe 1 numeric
+      when: item.key != inventory_hostname
+      with_dict: loopbacks
+      register: trace_result
+
+
+
+      
